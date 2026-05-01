@@ -11,10 +11,6 @@ car_data = pd.read_csv(
 st.header('Car Data Analysis')
 
 
-# Botón para gradicar un grafico de dispersión
-button_scatter = st.button('Graficar gráfico de dispersión')
-
-
 # Crear una casilla de selección para elegir el tipo de gráfico
 chart_type = st.selectbox('Selecciona el tipo de gráfico', [
                           'Histograma', 'Gráfico de dispersión'])
@@ -30,7 +26,7 @@ if chart_type == 'Histograma':
 
     # Agregar un gráfico de dispersión para visualizar la relación entre el año y el precio
     fig.add_trace(go.Scatter(
-        x=car_data['year'], y=car_data['price'], mode='markers', name='Price vs Year'))
+        x=car_data['model_year'], y=car_data['price'], mode='markers', name='Price vs Year'))
 
     # Configurar el diseño del gráfico
     fig.update_layout(title='Price vs Year of Vehicles',
@@ -51,7 +47,7 @@ elif chart_type == 'Gráfico de dispersión':
 
     # Agregar un gráfico de dispersión para visualizar la relación entre el año y el precio
     fig.add_trace(go.Scatter(
-        x=car_data['year'], y=car_data['price'], mode='markers', name='Price vs Year'))
+        x=car_data['model_year'], y=car_data['price'], mode='markers', name='Price vs Year'))
 
     # Configurar el diseño del gráfico
     fig.update_layout(title='Price vs Year of Vehicles',
