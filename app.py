@@ -5,7 +5,7 @@ import plotly.graph_objs as go
 
 # Leer el archivo CSV con los datos de los vehículos
 car_data = pd.read_csv(
-    'C:/Users/gabyy/Documents/Carpetaprueba/Proyecto-Sprint-7/vehicles_us.csv')
+    'https://github.com/YessCast/Proyecto-Sprint-7/blob/main/vehicles_us.csv')
 
 # Encabezado de la aplicación
 st.header('Car Data Analysis')
